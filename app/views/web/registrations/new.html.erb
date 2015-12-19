@@ -1,7 +1,7 @@
 <div class="cd-fold-content single-page">
   <h2>Donor's Registration</h2>
 
-  <%= form_tag("users/new",:class=>"cd-form floating-labels") do %>
+  <%= form_tag("/users",:class=>"cd-form floating-labels") do %>
   <fieldset>
     <legend>Donor's Info</legend>
     <div class="icon">
@@ -14,7 +14,7 @@
     </div>
     <div class="icon">
       <label class="my_label" for="cd-bloodgrp">Blood Group</label>
-      <%= text_field_tag "user[blood_group][name]",'', :class => 'budget', :html => {:required => true  }%>
+      <%= select_tag "user[profile][blood_group_id]",options_for_select(BloodGroup.all.map{|bg|[bg.name,bg.id]}), :class => 'budget', :html => {:required => true  }%>
     </div>
     <div class="icon">
       <label class="my_label" for="cd-number">Phone Number</label>
@@ -38,8 +38,18 @@
     </div>
     <div class="icon">
       <label class="my_label" for="cd-state">State</label>
-      <%= text_field_tag "user[address][state]",'', :class => 'message', :html => {:required => true  }%>
+      <%= select_tag "user[address][state]",options_for_select(State.all.map{|st|[st.name, st.id]}), :class => 'message', :html => {:required => true  }%>
     </div>
+    <div class="icon">
+    <label class="my_label" for="cd-password">Password</label>
+    <%= password_field_tag "user[password]",'', :class => 'message', :html => {:required => true  }%>
+    </div>
+
+    <div class="icon">
+    <label class="my_label" for="cd-password_confirmation">Password</label>
+    <%= password_field_tag "user[password_confirmation]",'', :class => 'message', :html => {:required => true  }%>
+    </div>
+
 
     <div>
       <%= submit_tag "SUBMIT"%>
