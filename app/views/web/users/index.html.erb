@@ -1,0 +1,29 @@
+<div class="cd-fold-content single-page">
+  <h2>Need Blood?</h2>
+  <%= form_tag("donor/new",:class=>"cd-form floating-labels") do %>
+      <fieldset>
+        <legend>Please fill in your requirement</legend>
+        <div class="icon">
+            <label class="my_label" for="cd-name">Your Name</label>
+            <%= text_field_tag "user[profile][first_name]",'', :class => 'user', :html => {:required => true }%>
+            <!-- <input class="user" type="text" name="cd-name" id="cd-name" required> -->
+          </div> 
+          <div class="icon">
+            <label class="my_label" for="cd-bloodgrp">Required Blood Group</label>
+            <!-- <input class="budget" type="text" name="cd-number" id="cd-bloodgrp" required> -->
+          </div> 
+          <div class="icon">
+            <label class="my_label" for="cd-number">Phone Number</label>
+            <!-- <input class="budget" type="text" name="cd-number" id="cd-number" required> -->
+          </div> 
+          <div class="icon">
+            <label class="my_label" for="cd-email">When?</label>
+          <!-- <input class="email" type="email" name="cd-email" id="cd-email"> -->
+          </div>
+          <div>
+            <!-- <input type="submit" value="Submit"> -->
+          </div>
+      </fieldset>
+  </form>
+</div>
+
