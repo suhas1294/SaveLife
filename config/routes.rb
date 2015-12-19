@@ -24,4 +24,7 @@ Rails.application.routes.draw do
   # Registration Page
   get 'users/new' => 'web/registrations#new'
   post 'users' => 'web/registrations#create'
+
+  # APIs
+  post 'api/v1/sign_up/' => 'api/v1/registrations#create'
 end
