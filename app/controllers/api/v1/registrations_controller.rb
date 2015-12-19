@@ -3,7 +3,13 @@ module Api
     class RegistrationsController < BaseController
       def create
         @proc_code = Proc.new do
-          @data = User::Creation.new(user_params).create
+          response = User::Creation.new(user_params).create
+          if response.errors.blank?
+            @data = response
+          else
+            @errors = response
+          end
+
         end
       end
 
