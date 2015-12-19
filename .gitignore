@@ -18,3 +18,7 @@
 
 # Ignore the database.yml
 /config/database.yml
+
+.rbenv-gemset
+.rbenv-gemsets
+
