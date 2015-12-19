@@ -10,8 +10,8 @@ class User::Creation
 
   def create
     user = User.new(@user_params)
-    address = user.build_address(@address_params)
     profile = user.build_profile(@profile_params)
+    address = user.build_address(@address_params)
     user.save
     user
   end
