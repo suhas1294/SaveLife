@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'static/item-2' => 'static#item_2'
   get 'static/item-3' => 'static#item_3'
   get 'static/item-4' => 'static#item_4'
+  get 'static/item-5' => 'static#item_5'
 
   #welcome pages
   get 'welcome/item-1' => 'welcome#item_1'
