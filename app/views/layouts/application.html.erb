@@ -7,8 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<main class="cd-main">
 
+  <header>
+  <div class="row">
+  <div class="col-md-6">
+    <h1>Save Life</h1>
+    </div>
+  <div class="col-md-6">
+   <%= link_to 'Sign In', sign_in_form_path, :remote => true %>
+    </div>
+    </div>
+  </header>
+  </main>
 <%= yield %>
+<div id="modal-holder"></div>
+
 
 </body>
 </html>
