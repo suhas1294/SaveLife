@@ -9,9 +9,13 @@ class Web::RegistrationsController < ApplicationController
     if user.errors.blank?
       # mail sending code
       # redirect
+      redirect_to after_sign_in_path
     else
       render 'new'
     end
+  end
+
+  def after_sign_in
   end
 
   private
