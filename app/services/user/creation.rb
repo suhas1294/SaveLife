@@ -12,11 +12,8 @@ class User::Creation
     user = User.new(@user_params)
     address = user.build_address(@address_params)
     profile = user.build_profile(@profile_params)
-    if user.valid?
-      user.save
-    else
-      false
-    end
+    user.save
+    user
   end
 
   private
