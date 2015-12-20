@@ -1,6 +1,7 @@
 <div class="component">
   <h3>Help the following people by donating your Blood</h3>
   <p>Please find the details of the Recipient below</p><br />
+    <% if @contacts.present? %>
   <table>
     <thead>
       <tr>
@@ -10,7 +11,6 @@
       </tr>
     </thead>
     <tbody>
-    <% if @contacts.present? %>
     <% @contacts.each do |c| %>
 
       <tr>
