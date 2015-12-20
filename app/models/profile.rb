@@ -4,6 +4,6 @@ class Profile < ActiveRecord::Base
   belongs_to :user
   belongs_to :address
 
-  has_one :blood_group
+  belongs_to :blood_group
 end
 
