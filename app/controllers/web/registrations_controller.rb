@@ -10,13 +10,16 @@ class Web::RegistrationsController < ApplicationController
     if user.errors.blank?
       # mail sending code
       # redirect
-      redirect_to after_sign_in_path
+      session[:user_id] = user.id
+      redirect_to after_sign_in_path(:blood_group_id => user.profile.blood_group_id), :notice => "Signed up!"
     else
-      render 'new'
+      redirect_to root_path
     end
   end
 
   def after_sign_in
+    @user = Profile.find_by_blood_group_id(params[:blood_group_id])
+    @contacts = Contact.where("blood_group_id = ?", @user.blood_group_id).all
   end
 
   private

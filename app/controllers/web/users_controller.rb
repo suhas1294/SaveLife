@@ -24,10 +24,13 @@ class Web::UsersController < ApplicationController
   def send_email
     user_ids = params[:user_ids]
     contact= Contact.find(params[:contact_id])
+    if user_ids.present?
     user_ids.each do |u|
       user = Profile.find_by_user_id(u)
       UserMailer.request_email(user, contact).deliver_now
     end
+  else
+  end
     redirect_to root_url    
   end
 

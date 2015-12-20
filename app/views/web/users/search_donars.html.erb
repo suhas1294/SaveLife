@@ -1,5 +1,5 @@
 <div class="component">
-<h3>Congratulations! you have found 7 donors with A+ve.</h3>
+<h3>Congratulations! you have found <%= @donars.count %> donors with <%= @contact.blood_group.name %>.</h3>
 				<p>Please find the details of the Donors below</p><br />
 				<%= form_tag(send_email_path ) do %>
 				<table>
