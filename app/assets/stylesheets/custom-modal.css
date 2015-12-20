@@ -1,0 +1,19 @@
+.modal-dialog.sign-up-modal .modal-header {
+    padding: 8px 15px;
+    border-bottom: none;
+    background-color: #ea6060 !important;
+}
+.modal-dialog.sign-up-modal .modal-content {
+    border: none;
+    border: none;
+    border-radius: 0px;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.modal-dialog.sign-up-modal .modal-title {
+    text-align: center;
+}
+.modal-dialog.sign-up-modal .modal-body {
+    padding: 25px;font-family: "Roboto";
+}

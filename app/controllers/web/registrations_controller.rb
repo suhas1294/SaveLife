@@ -1,7 +1,8 @@
 class Web::RegistrationsController < ApplicationController
 
-  def new
+  before_filter :require_login, :only => :after_sign_in
 
+  def new
   end
 
   def create

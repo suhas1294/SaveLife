@@ -1,0 +1,34 @@
+<div class="sign_in_form">
+<div class="modal-dialog sign-up-modal">
+                <div class="modal-content">
+                    <!-- <div class="modal-header">
+                        <button type="button" class="close modal-close-btn" data-dismiss="modal">
+                            <span aria-hidden="true" class="icons-close-with-circle"></span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title"><span class="icons-modal-logo"> </span></h4>
+                    </div> -->
+                    <div class="modal-body text-center">
+
+                      <%= form_tag("/sign_in",:class=>"cd-form floating-labels") do %>
+                    <fieldset>
+                    <legend>Donor's Sign In</legend>
+                    <div class="icon">
+                    <label class="my_label" for="cd-email">Email</label>
+                    <%= text_field_tag "email",'', :class => 'email', :html => {:required => true  }%>
+                    </div>
+                     <div class="icon">
+                     <label class="my_label" for="cd-password">Password</label>
+                     <%= password_field_tag "password",'', :class => 'message', :html => {:required => true  }%>
+                    </div>
+                    <div>
+                    <%= submit_tag "SUBMIT"%>
+                    </div>
+
+                </fieldset>
+  
+                <% end %>
+                    </div>
+                </div>
+            </div>
+            </div>
