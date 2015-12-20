@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   post 'contacts' => 'web/users#create'
   get  'search_donars' => 'web/users#search_donars'
   post 'send_email'  => 'web/users#send_email'
+
   #Search Donor
   get 'donor/new' => 'web/users#index'
 
