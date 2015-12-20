@@ -1,0 +1,30 @@
+<div class="component">
+<h3>Congratulations! you have found 7 donors with A+ve.</h3>
+				<p>Please find the details of the Donors below</p><br />
+				<%= form_tag(send_email_path ) do %>
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Blood group</th>
+							<th>Mobile</th>
+							<th>City</th>
+							<th>Select All<br /><input type="checkbox" name ="chk1"/></th>
+						</tr>
+					</thead>
+					<% @donars.each do |d| %>
+					<tbody>
+						<tr>
+						<td class="user-name"><%= d.first_name %></td>
+						<td class="user-email"><%= d.blood_group.name %></td>
+						<td class="user-phone"><%= d.mobile_number %></td>
+						<td class="user-mobile"><%= d.address.city %></td>
+						<td><input type="checkbox" name ="user_ids[]" value = <%= d.user_id %>></td></tr>
+					</tbody>
+						<% end %>
+				</table>
+				<br />
+						<%= hidden_field_tag "contact_id", @contact.id %>
+				<%= submit_tag 'Send Email', :class =>"cd-btn" %>
+				<% end %>
+	</div>

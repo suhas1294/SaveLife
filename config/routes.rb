@@ -25,7 +25,11 @@ Rails.application.routes.draw do
   # Registration Page
   get 'users/new' => 'web/registrations#new'
   post 'users' => 'web/registrations#create'
-
+  get 'after_sign_in' => 'web/registrations#after_sign_in'
+  get 'contacts/new' => 'web/users#new'
+  post 'contacts' => 'web/users#create'
+  get  'search_donars' => 'web/users#search_donars'
+  post 'send_email'  => 'web/users#send_email'
   #Search Donor
   get 'donor/new' => 'web/users#index'
 
