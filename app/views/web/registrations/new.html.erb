@@ -1,7 +1,7 @@
 <div class="cd-fold-content single-page">
   <h2>Donor's Registration</h2>
 
-  <%= form_tag("/users",:class=>"cd-form floating-labels") do %>
+  <%= form_tag("/users",:class=>"cd-form floating-labels", id: "sign_up_form") do %>
   <fieldset>
     <legend>Donor's Info</legend>
     <div class="icon">
@@ -42,21 +42,19 @@
     </div>
     <div class="icon">
     <label class="my_label" for="cd-password">Password</label>
-    <%= password_field_tag "user[password]",'', :class => 'message', :html => {:required => true  }%>
+    <%= password_field_tag "user[password]",'', :class => 'form-control message', :html => {:required => true  }%>
     </div>
 
     <div class="icon">
-    <label class="my_label" for="cd-password_confirmation">Password</label>
-    <%= password_field_tag "user[password_confirmation]",'', :class => 'message', :html => {:required => true  }%>
-    <%#= redirect_to :back %>
+    <label class="my_label" for="cd-password_confirmation">Password Confirmation</label>
+    <%= password_field_tag "user[password_confirmation]",'', :class => 'form-control message', :html => {:required => true}%>
     </div>
-
-
     <div>
       <%= submit_tag "SUBMIT"%>
     </div>
-
   </fieldset>
-
   <% end %>
 </div>
+<script type="text/javascript">
+  sign_up_form();
+</script>

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get 'welcome/item-1' => 'welcome#item_1'
   get 'welcome/item-3' => 'welcome#item_3'
   get 'welcome/item-4' => 'welcome#item_4'
+  get 'welcome/item-5' => 'welcome#item_5'
 
   # Registration Page
   get 'users/new' => 'web/registrations#new'
