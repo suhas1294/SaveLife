@@ -126,3 +126,12 @@ a:hover, a:focus {
 	}
 
 }
+.title {
+	text-align: center;
+}
+.communities-card1 {
+	text-align: center;
+}
+.form-control.message{
+	height: 55px;
+}
