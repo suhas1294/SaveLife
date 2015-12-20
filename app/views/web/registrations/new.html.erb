@@ -9,7 +9,7 @@
       <%= text_field_tag "user[profile][first_name]",'', :class => 'user', :html => {:required => true  }%>
     </div>
     <div class="icon">
-      <label class="my_label" for="cd-name">Last Name</label> 
+      <label class="my_label" for="cd-name">Last Name</label>
       <%= text_field_tag "user[profile][last_name]",'', :class => 'user', :html => {:required => true }%>
     </div>
     <div class="icon">
@@ -48,6 +48,7 @@
     <div class="icon">
     <label class="my_label" for="cd-password_confirmation">Password</label>
     <%= password_field_tag "user[password_confirmation]",'', :class => 'message', :html => {:required => true  }%>
+    <%#= redirect_to :back %>
     </div>
 
 
@@ -56,6 +57,6 @@
     </div>
 
   </fieldset>
-  
+
   <% end %>
 </div>

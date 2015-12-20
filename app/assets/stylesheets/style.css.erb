@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -20,14 +20,14 @@ body {
 
 a {
   color: #544173;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 h1, h2 {
   font-family: "Vollkorn", serif;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Patterns - reusable parts of our design
 
@@ -36,15 +36,15 @@ Patterns - reusable parts of our design
   overflow: hidden;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Header
 
 -------------------------------- */
 header {
   height: 120px;
-  line-height: 120px;
-  text-align: center;
+  /*line-height: 120px;*/
+  text-align: left;
   background: #ffffff;
 }
 header h1 {
@@ -54,14 +54,14 @@ header h1 {
 @media only screen and (min-width: 600px) {
   header {
     height: 100px;
-    line-height: 100px;
+    /*line-height: 100px;*/
   }
   header h1 {
     font-size: 3rem;
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Main content
 
@@ -286,7 +286,7 @@ Main content
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 folding panel
 
@@ -598,7 +598,7 @@ folding panel
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Javascript disabled
 
@@ -922,7 +922,7 @@ Javascript disabled
     transform: scale(0.8);
   }
 }
-/* -------------------------------- 
+/* --------------------------------
 
 Custom icons
 
@@ -958,9 +958,9 @@ Custom icons
   background: url("<%= asset_path('cd-icon-message.svg') %>") no-repeat 16px 16px, url("<%= asset_path('cd-required.svg') %>") no-repeat top right;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-FLoating labels 
+FLoating labels
 
 -------------------------------- */
 .my_label {
@@ -1005,4 +1005,11 @@ FLoating labels
   padding:0.75em;
   float:right;
   border:1px solid #bb0a1e;
+}
+
+.logo {
+  display: block;
+}
+.img_logo {
+  margin-top: 3%;
 }
