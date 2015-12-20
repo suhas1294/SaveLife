@@ -17,7 +17,7 @@
     </div>
   <div class="col-md-6">
   <% if current_user %>
-  <p>Singed in as <%= current_user.first_name %></p>
+  <p class="sign_out_text">Singed in as <%= current_user.first_name %></p>
   <%= link_to 'Sign Out', sign_out_path, :class =>"btn btn-primary navbar-btn sign_out_button", :method => "delete" %>
   <% else %>
   <button type="button" class="btn btn-primary navbar-btn navbar-right sign-in-btn visible-sm visible-md visible-lg sign_in_button" data-toggle="modal" data-target="#myModal">Sign in</button>
