@@ -1,62 +1,60 @@
 <div class="cd-fold-content single-page">
   <h2>Donor's Registration</h2>
 
-  <%= form_tag("/users",:class=>"cd-form floating-labels") do %>
+  <%= form_tag("/users",:class=>"cd-form floating-labels", id: "sign_up_form") do %>
   <fieldset>
     <legend>Donor's Info</legend>
     <div class="icon">
       <label class="my_label" for="cd-name">First Name</label>
-      <%= text_field_tag "user[profile][first_name]",'', :class => 'user', :html => {:required => true  }%>
+      <%= text_field_tag "user[profile][first_name]",'', :class => 'user',required: true, :html => {:required => true  }%>
     </div>
     <div class="icon">
       <label class="my_label" for="cd-name">Last Name</label>
-      <%= text_field_tag "user[profile][last_name]",'', :class => 'user', :html => {:required => true }%>
+      <%= text_field_tag "user[profile][last_name]",'', :class => 'user',required: true, :html => {:required => true }%>
     </div>
     <div class="icon">
       <label class="my_label" for="cd-bloodgrp">Blood Group</label>
-      <%= select_tag "user[profile][blood_group_id]",options_for_select(BloodGroup.all.map{|bg|[bg.name,bg.id]}), :class => 'budget', :html => {:required => true  }%>
+      <%= select_tag "user[profile][blood_group_id]",options_for_select(BloodGroup.all.map{|bg|[bg.name,bg.id]}), :class => 'budget',required: true, :html => {:required => true  }%>
     </div>
     <div class="icon">
       <label class="my_label" for="cd-number">Phone Number</label>
-      <%= text_field_tag "user[profile][mobile_number]",'', :class => 'budget', :html => {:required => true  }%>
+      <%= text_field_tag "user[profile][mobile_number]",'', :class => 'budget',required: true, :html => {:required => true  }%>
     </div>
     <div class="icon">
       <label class="my_label" for="cd-email">Email</label>
-      <%= text_field_tag "user[email]",'', :class => 'email', :html => {:required => true  }%>
+      <%= text_field_tag "user[email]",'', :class => 'email',required: true, :html => {:required => true  }%>
     </div>
     <div class="icon">
       <label class="my_label" for="cd-address1">Address Line1</label>
-      <%= text_field_tag "user[address][address_1]",'', :class => 'message', :html => {:required => true  }%>
+      <%= text_field_tag "user[address][address_1]",'', :class => 'message',required: true, :html => {:required => true  }%>
     </div>
     <div class="icon">
       <label class="my_label" for="cd-address2">Address Line2</label>
-      <%= text_field_tag "user[address][address_2]",'', :class => 'message', :html => {:required => true  }%>
+      <%= text_field_tag "user[address][address_2]",'', :class => 'message',required: true, :html => {:required => true  }%>
     </div>
     <div class="icon">
       <label class="my_label" for="cd-city">City</label>
-      <%= text_field_tag "user[address][city]",'', :class => 'message', :html => {:required => true  }%>
+      <%= text_field_tag "user[address][city]",'', :class => 'message',required: true, :html => {:required => true  }%>
     </div>
     <div class="icon">
       <label class="my_label" for="cd-state">State</label>
-      <%= select_tag "user[address][state]",options_for_select(State.all.map{|st|[st.name, st.id]}), :class => 'message', :html => {:required => true  }%>
+      <%= select_tag "user[address][state]",options_for_select(State.all.map{|st|[st.name, st.id]}), :class => 'message',required: true, :html => {:required => true  }%>
     </div>
     <div class="icon">
     <label class="my_label" for="cd-password">Password</label>
-    <%= password_field_tag "user[password]",'', :class => 'message', :html => {:required => true  }%>
+    <%= password_field_tag "user[password]",'', :class => 'form-control message', :html => {:required => true  }%>
     </div>
 
     <div class="icon">
-    <label class="my_label" for="cd-password_confirmation">Password</label>
-    <%= password_field_tag "user[password_confirmation]",'', :class => 'message', :html => {:required => true  }%>
-    <%#= redirect_to :back %>
+    <label class="my_label" for="cd-password_confirmation">Password Confirmation</label>
+    <%= password_field_tag "user[password_confirmation]",'', :class => 'form-control message', :html => {:required => true}%>
     </div>
-
-
     <div>
       <%= submit_tag "SUBMIT"%>
     </div>
-
   </fieldset>
-
   <% end %>
 </div>
+<script type="text/javascript">
+  sign_up_form();
+</script>
